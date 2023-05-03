@@ -1,0 +1,32 @@
+<section class="main">
+    <aside class="container">
+        <aside class="table">
+            <aside class="head-sec">
+                <aside class="head-sec-text">Contact List</aside>
+                <button class="button" (click)="add()">Add</button>
+            </aside>
+            <aside class="body-sec">
+                <aside class="list" *ngFor="let item of contactlist;let i=index;">
+                        <span>{{item.name}}</span>
+                        <span>{{item.dob}}</span>
+                        <span>{{item.number}}</span>
+                        <span>{{item.name}}</span>
+                    <aside class="button-grp">
+<button [routerLink]="['/edit']">Edit</button>
+<!-- <button (click)="delete(i)">delete</button> -->
+<button class="delete" (click)="delete(i)">Delete</button>
+                    </aside>
+                </aside>
+                
+            </aside>
+            <footer class="footer">
+                <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                    <mat-button-toggle value="bold" class="ftr-btn">1</mat-button-toggle>
+                    <mat-button-toggle value="italic" class="ftr-btn">2</mat-button-toggle>
+                    <mat-button-toggle value="underline" class="ftr-btn">3</mat-button-toggle>
+                    <mat-button-toggle value="underli" class="ftr-btn">4</mat-button-toggle>
+                  </mat-button-toggle-group>
+            </footer>
+        </aside>
+    </aside>
+</section>

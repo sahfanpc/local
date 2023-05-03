@@ -1,0 +1,20 @@
+<section class="main">
+    <aside class="container">
+        <form  [formGroup]="loginform">
+            <h2>contact</h2>
+            <aside>
+            <input type=" text" placeholder="Name" formControlName="name"><br>
+        </aside>
+        <aside>
+            <input type="date" formControlName="date"><br>
+        </aside>
+        <aside>
+            <input type="number" placeholder="Phone Number" formControlName="number"><br>
+        </aside>
+            <aside class="button-grp">
+                <button (click)="submit(loginform.value)">Sumbit</button>
+                <button [routerLink]="['homepage']">Home</button>
+            </aside>
+        </form>
+    </aside>
+</section>

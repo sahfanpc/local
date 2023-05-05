@@ -9,35 +9,25 @@ import { UtilityService } from 'src/app/sarvices/utility.service';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
-  butt:boolean=false;
-
-contactlist:Array<any>=[];
+  contactlist: Array<any> = [];
+  saveFlag: boolean = true;
   constructor(private router:Router,private utility:UtilityService){}
   ngOnInit():void{
     this.getAllContactList();
   }
-
 getAllContactList():void{
   this.contactlist=this.utility.getcontacts();
   console.log(this.contactlist)
 }
-
-
   add(){
     this.router.navigateByUrl('')
   }
 delete(index:number):void{
-// console.log(index)
 alert("confirm")
-this.butt=true;
- 
-    
 this.utility.Deletecontact(index);
-}
-onButtonClick() {
-  console.log('Button clicked!');
-}
-
-
+  }
+  editContact(index:number):void {
+    this.router.navigate([''], { queryParams: { index: index } });
+  }
 }
 
